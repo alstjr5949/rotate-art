@@ -1,0 +1,55 @@
+body {
+  height: 100vh;
+  width: 100vw;
+  background: linear-gradient(whitesmoke, lightgrey);
+}
+
+.wrapper {
+  display: grid;
+  grid-template: repeat(5, 1fr) / 60px 95px 123px 145px 155px 150px 145px 123px 95px 60px;
+  row-gap: 10px;
+  justify-content: center;
+}
+
+.box {
+  height: 300px;
+  width: 150px;
+  background-color: aliceblue;
+  box-shadow: 0px 5px 5px grey;
+}
+
+.box:nth-child(10n + 4) {
+  transform: rotateY(30deg);
+}
+
+.box:nth-child(10n + 7) {
+  transform: rotateY(-30deg);
+  justify-self: end;
+}
+
+.box:nth-child(10n + 3) {
+  transform: rotateY(45deg);
+}
+
+.box:nth-child(10n + 8) {
+  transform: rotateY(-45deg);
+  justify-self: end;
+}
+
+.box:nth-child(10n + 2) {
+  transform: rotateY(60deg);
+}
+
+.box:nth-child(10n + 9) {
+  transform: rotateY(-60deg);
+  justify-self: end;
+}
+
+.box:nth-child(10n + 1) {
+  transform: rotateY(75deg);
+}
+
+.box:nth-child(10n + 10) {
+  transform: rotateY(-75deg);
+  justify-self: end;
+}
