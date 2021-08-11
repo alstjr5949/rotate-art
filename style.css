@@ -1,3 +1,5 @@
+@import "reset.css";
+
 body {
   height: 100vh;
   width: 100vw;
@@ -13,11 +15,10 @@ header {
 }
 
 .wrapper {
-  height: 580px;
-  width: 680px;
+  height: 545px;
+  width: 650px;
   display: grid;
   grid-template: repeat(10, 1fr) / repeat(12, 1fr);
-  gap: 5px;
   perspective: 500px;
   background-color: white;
 }
@@ -25,6 +26,14 @@ header {
 #box {
   height: 50px;
   width: 50px;
-  border: 1px solid black;
   cursor: pointer;
+  border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header h1 {
+  font-size: 40px;
+  font-weight: 800;
 }

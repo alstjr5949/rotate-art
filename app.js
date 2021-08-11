@@ -1,5 +1,6 @@
 const boxs = document.querySelectorAll("#box");
 const blackArr = ["white", "#eeeeee", "#bdbdbd", "#757575", "#000000"];
+const blackArrBorder = ["#000000", "#eeeeee", "#bdbdbd", "#757575", "#000000"];
 
 const boxObjs = [];
 
@@ -19,5 +20,16 @@ for (let i = 0; i < boxObjs.length; i++){
         boxObjs[i].indexNum = 0;
       }
       boxObjs[i].box.style.backgroundColor = blackArr[boxObjs[i].indexNum];
+      boxObjs[i].box.style.borderColor = blackArrBorder[boxObjs[i].indexNum];
   });
+  if (boxObjs[i].box.innerText === "1"){
+    boxObjs[i].box.style.color = blackArr[1];
+  } else if (boxObjs[i].box.innerText === "2"){
+    boxObjs[i].box.style.color = blackArr[2];
+  } else if (boxObjs[i].box.innerText === "3"){
+    boxObjs[i].box.style.color = blackArr[3];
+  } else if (boxObjs[i].box.innerText === "4"){
+    boxObjs[i].box.style.color = blackArr[4];
+  }
 }
+
