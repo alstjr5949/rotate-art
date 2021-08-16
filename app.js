@@ -1,6 +1,7 @@
 const boxs = document.querySelectorAll("#box");
 const blackArr = ["white", "#eeeeee", "#bdbdbd", "#757575", "#000000"];
 const blackArrBorder = ["#000000", "#eeeeee", "#bdbdbd", "#757575", "#000000"];
+const navBtn = document.querySelector(".nav__btn");
 
 const boxObjs = [];
 
@@ -33,3 +34,9 @@ for (let i = 0; i < boxObjs.length; i++){
   }
 }
 
+function navBtnClickHandler(){
+  const navList = document.getElementById("navList");
+  navList.classList.toggle("hidden");
+}
+
+navBtn.addEventListener("click", navBtnClickHandler);

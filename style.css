@@ -45,30 +45,43 @@ header h1 {
 
 .nav__bar {
   margin-bottom: 20px;
+  position: relative;
 }
 
 .nav__btn {
   width: 200px;
-  height: 30px;
+  height: 40px;
   background-color: rgba(256, 256, 256, 0.3);
   border: 1px solid rgba(256, 256, 256, 0.8);
-  border-radius: 10px;
   cursor: pointer;
 }
 
 .nav__list {
   width: 200px;
   height: 100px;
+  border: none;
   overflow-y: scroll;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
+  position: absolute;
+  top: 39px;
+  z-index: 1;
+  background-color: #f1f1f1;
 }
 
 .nav__list a {
+  padding: 10px 0px;
+  text-align: center;
   text-decoration: none;
   color: black;
+  width: 100%;
+  height: 40px;
+}
+
+.nav__list a:hover {
+  background-color: #ddd;
 }
 
 .hidden {
