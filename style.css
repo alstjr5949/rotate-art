@@ -1,4 +1,5 @@
 @import "reset.css";
+@import url("https://fonts.googleapis.com/css2?family=DotGothic16&display=swap");
 
 body {
   height: 100vh;
@@ -11,7 +12,7 @@ body {
 }
 
 header {
-  margin-bottom: 50px;
+  margin-bottom: 30px;
 }
 
 .wrapper {
@@ -31,9 +32,45 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
+  text-decoration-line: none;
+  user-select: none;
+  font-family: "DotGothic16", sans-serif;
 }
 
 header h1 {
   font-size: 40px;
   font-weight: 800;
+  font-family: "DotGothic16", sans-serif;
+}
+
+.nav__bar {
+  margin-bottom: 20px;
+}
+
+.nav__btn {
+  width: 200px;
+  height: 30px;
+  background-color: rgba(256, 256, 256, 0.3);
+  border: 1px solid rgba(256, 256, 256, 0.8);
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.nav__list {
+  width: 200px;
+  height: 100px;
+  overflow-y: scroll;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.nav__list a {
+  text-decoration: none;
+  color: black;
+}
+
+.hidden {
+  display: none;
 }

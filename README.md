@@ -32,3 +32,9 @@
 - 약간의 노가다성이 있지만 onclick을 통해 각각의 box에 적용한다는 아주 원초적인 방법이 있겠지만 너무나도 방대한 코드가 될 것이고 이는 좋지 않은 코드라 여러 방법을 시도해 봤으나,, 지금의 지식과 경험으론 한계가 있어 Nomad Coder Slack 채널에 질문해보았다. 질문 결과 box의 eventHandeler 함수가 j를 공유하는 문제점이 있다는 얘기를 들었고 j를 사용하는 대신 box와 index값을 가지는 object들의 array를 하나 새로 생성해서 처리해보는 것이 좋겠다는 의견을 받았다.
 
 <strong>해결책</strong>: 그래서 boxObjs를 생성하고 box와 indexNum를 포함한 boxObj를 생성하고 boxObjs에 boxObj를 push했다. 이후 if문을 for문을 활용해 간소화시키고 box 클릭시마다 indexNum이 +1 씩 증가하도록 하고 if 조건에 indexNum이 5와 같아지면 indexNum이 0이 되도록하여 해결하였다.
+
+4. 더블클릭시 text highlighting 효과를 제거할 수 없을까?
+
+- 여러번 클릭 시 마다 text가 highlighting 되는 것이 보기애 좋지 않아서 제거할 수 있는 방법을 생각해보았다. 처음에는 text-decoration을 none으로 바꿔보았지만 text-decoration의 문제는 아니었고, 그렇다고 background의 문제도 아니었다.
+
+<strong>해결책</strong>: 구글링을 통해 쉽게 알 수 있었다. 검색어는 'double click highlighting text none' 이었다. 의외로 간단한 css코드로 해결 가능한 문제였다. user-select : none; 으로 해결할 수 있었다.
