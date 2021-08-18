@@ -69,6 +69,8 @@ header h1 {
   top: 39px;
   z-index: 1;
   background-color: #f1f1f1;
+  animation: growDown 300ms ease-in-out forwards;
+  transform-origin: top center;
 }
 
 .nav__list a {
@@ -86,4 +88,16 @@ header h1 {
 
 .hidden {
   display: none;
+}
+
+@keyframes growDown {
+  0% {
+    transform: scaleY(0);
+  }
+  80% {
+    transform: scaleY(1.1);
+  }
+  100% {
+    transform: scaleY(1);
+  }
 }
